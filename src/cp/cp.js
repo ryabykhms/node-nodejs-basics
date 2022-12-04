@@ -1,5 +1,11 @@
+import { fork } from "child_process";
+import { getPath } from "../fs/utils/index.js";
+
 const spawnChildProcess = async (args) => {
-    // Write your code here
+  const dir = "files";
+  const filename = "script.js";
+  const scriptPath = getPath(import.meta.url, dir, filename);
+  fork(scriptPath, args);
 };
 
-spawnChildProcess();
+spawnChildProcess(["open", "start"]);
