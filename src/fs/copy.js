@@ -1,10 +1,6 @@
 import { copyFile, mkdir, readdir, rmdir } from "fs/promises";
 import { resolve } from "path";
-import {
-  FS_FILE_NOT_EXISTS_CODE,
-  FS_OPERATION_ERROR_MESSAGE,
-  getPath,
-} from "./utils/index.js";
+import { FS_FILE_NOT_EXISTS_CODE, FS_OPERATION_ERROR_MESSAGE, getPath } from "./utils/index.js";
 
 const handleDirEntryCopy = async (dirEntry, src, dest) => {
   const newSrc = resolve(src, dirEntry.name);

@@ -1,9 +1,5 @@
 import { writeFile } from "fs/promises";
-import {
-  FS_FILE_ALREADY_EXISTS_CODE,
-  FS_OPERATION_ERROR_MESSAGE,
-  getPath,
-} from "./utils/index.js";
+import { FS_FILE_ALREADY_EXISTS_CODE, FS_OPERATION_ERROR_MESSAGE, getPath } from "./utils/index.js";
 
 const create = async () => {
   const filename = "fresh.txt";
